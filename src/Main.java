@@ -25,10 +25,11 @@ public class Main {
         }
 
         for (int i = 0; i < 5; i++) {
+            int a = 0;
             Scanner in = new Scanner(System.in);
             System.out.println("Number: ");
-            int a = in.nextInt();
-            if (a <= 5) {
+            a = in.nextInt();
+            if (a >= 5) {
                 System.out.println("Högre än 5!");
             } else {
 
@@ -43,7 +44,7 @@ public class Main {
                 int num = scan.nextInt();
                 scan.nextLine();
 
-                System.out.println("the number is " + num);
+                System.out.println("the number is a number ");
                 break;
             } catch (Exception error) {
                 scan.nextLine();
@@ -52,12 +53,29 @@ public class Main {
         }
 
         int slumptal = (int) (Math.random() * 10) + 1;
-        System.out.println("Ett slumpmässigt tal mellan 1 och 10: " + slumptal);
-        while (true){
+
+        while (true) {
+            System.out.println("Välj ett tal mellan 1 och 10: ");
             Scanner scanner = new Scanner(System.in);
+            try {
+                int tal = scanner.nextInt();
+                scan.nextLine();
 
+                break;
+            } catch (Exception error) {
+                scan.nextLine();
+                System.out.println("That is not a numnber");
 
-            if ()
+            }
+
+            int b = scanner.nextInt();
+            if (b == slumptal) {
+                System.out.println("Grattis!!!");
+                break;
+            } else {
+                System.out.println("Fel!");
+            }
+
         }
     }
 }
